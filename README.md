@@ -380,7 +380,7 @@ Kiran never improvises a medical fact — every claim is limited to a **closed, 
 <br>
 
 <img src="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake.svg" alt="Contribution snake" width="100%">
-
+<sub>Above: every contribution, public and private. Below: the public trail only — same twelve months, filtered to what an anonymous visitor can actually click through to.</sub>
 </div>
 
 ## `>_ ./awards --list`
