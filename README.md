@@ -7,7 +7,8 @@
   assets/header-*.svg     hand-written animated SVG · radar sweep
   assets/divider-*.svg    hand-written animated SVG · oscilloscope trace
   assets/timeline-*.svg   hand-written animated SVG · career rail
-  assets/radar-*.svg      hand-written animated SVG · skill radar
+  assets/radar-*.svg        hand-written animated SVG · skill radar
+  assets/architecture-*.svg hand-written animated SVG · retrieval pipeline
   assets/telemetry-*.svg      rendered daily by tools/telemetry.py from the GitHub API
   assets/contributions-*.svg  rendered daily from the contributions GraphQL API
 ═══════════════════════════════════════════════════════════════════════════════
@@ -237,32 +238,11 @@ concurrent code is humbling.
 > How I build a retrieval agent I'd actually trust in production.
 > The gate is the point: it would rather say nothing than say something ungrounded.
 
-```mermaid
-flowchart TD
-    Q(["User query"]) --> SP["Sparse retrieval<br/><i>keyword · BM25</i>"]
-    Q --> DN["Dense retrieval<br/><i>vector embeddings</i>"]
-
-    SP --> RRF["Reciprocal<br/>Rank Fusion"]
-    DN --> RRF
-
-    RRF --> CE["Cross-encoder<br/>re-ranking"]
-    CE --> GATE{"Grounded in a<br/>sourced document?"}
-
-    GATE -- yes --> ANS["Answer + citations"]
-    GATE -- no --> FB["Deterministic fallback<br/><i>degrade loudly, never guess</i>"]
-
-    classDef q  fill:#0D1117,stroke:#22D3EE,stroke-width:2px,color:#E6EDF3
-    classDef r  fill:#0D1117,stroke:#A78BFA,stroke-width:1.5px,color:#E6EDF3
-    classDef g  fill:#0D1117,stroke:#F59E0B,stroke-width:2px,color:#E6EDF3
-    classDef ok fill:#0D1117,stroke:#22D3EE,stroke-width:2px,color:#22D3EE
-    classDef no fill:#0D1117,stroke:#F87171,stroke-width:2px,color:#F87171
-
-    class Q q
-    class SP,DN,RRF,CE r
-    class GATE g
-    class ANS ok
-    class FB no
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/architecture-light.svg">
+  <img alt="Retrieval pipeline: query fans out to sparse and dense retrieval, merges via Reciprocal Rank Fusion, is re-ranked by a cross-encoder, then passes a grounding gate that either answers with citations or falls back deterministically" src="./assets/architecture-dark.svg" width="100%">
+</picture>
 
 ## `>_ ./frequency --stack`
 
@@ -379,7 +359,11 @@ Kiran never improvises a medical fact — every claim is limited to a **closed, 
 
 <br>
 
-<img src="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake.svg" alt="Contribution snake" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake-light.svg">
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake-dark.svg" width="100%">
+</picture>
 
 </div>
 
