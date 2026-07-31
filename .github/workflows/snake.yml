@@ -22,8 +22,8 @@ jobs:
         with:
           github_user_name: Ags-Ghafoor601
           outputs: |
-            dist/snake-dark.svg?color_snake=#22D3EE&color_dots=#161B22,#0E7490,#0891B2,#22D3EE,#67E8F9
-            dist/snake-light.svg?color_snake=#0891B2&color_dots=#EAEEF2,#A5E4F0,#38BDF8,#0891B2,#075985
+            dist/snake-dark.svg?color_snake=#22D3EE&color_dots=#0D1117,#0E7490,#0891B2,#22D3EE,#67E8F9
+            dist/snake-light.svg?color_snake=#0891B2&color_dots=#FFFFFF,#A5E4F0,#38BDF8,#0891B2,#075985
 
       - name: Push to the output branch
         uses: crazy-max/ghaction-github-pages@v4
