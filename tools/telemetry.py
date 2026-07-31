@@ -38,6 +38,15 @@ LANG_COLOR = {
 }
 FALLBACK = ["#22D3EE", "#A78BFA", "#34D399", "#FBBF24", "#F87171", "#60A5FA"]
 
+# Long language names get a readable short form rather than a mid-word chop.
+LANG_SHORT = {"Jupyter Notebook": "Jupyter", "Objective-C": "Obj-C",
+              "Vim Script": "VimScript", "Emacs Lisp": "E-Lisp"}
+
+
+def shorten(text, limit):
+    text = LANG_SHORT.get(text, text)
+    return text if len(text) <= limit else text[: limit - 1] + "\u2026"
+
 
 def api(path):
     req = urllib.request.Request(
@@ -48,6 +57,25 @@ def api(path):
     )
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
+
+
+def graphql_contributions():
+    """Contribution calendar. Needs a token; returns None when unavailable."""
+    if not TOKEN:
+        return None
+    q = ("query($login:String!){user(login:$login){contributionsCollection"
+         "{contributionCalendar{totalContributions weeks{contributionDays"
+         "{date contributionCount weekday}}}}}}")
+    body = json.dumps({"query": q, "variables": {"login": USER}}).encode()
+    req = urllib.request.Request(
+        "https://api.github.com/graphql", data=body,
+        headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json",
+                 "User-Agent": f"{USER}-profile-telemetry"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        payload = json.load(r)
+    cal = (payload.get("data") or {}).get("user", {}) \
+        .get("contributionsCollection", {}).get("contributionCalendar")
+    return cal
 
 
 def collect():
@@ -72,7 +100,15 @@ def collect():
             continue
 
     recent = sorted(owned, key=lambda r: r.get("pushed_at") or "", reverse=True)[:3]
+
+    try:
+        calendar = graphql_contributions()
+    except Exception as exc:
+        print(f"::warning::contribution calendar unavailable ({exc})")
+        calendar = None
+
     return {
+        "calendar": calendar,
         "repos": user.get("public_repos", len(owned)),
         "stars": stars,
         "followers": user.get("followers", 0),
@@ -90,6 +126,7 @@ def mock():
         "recent": [{"name": "calderr-ai-2026", "pushed": "2026-07-29T10:02:00Z", "lang": "Python"},
                    {"name": "AI-Portfolio", "pushed": "2026-07-24T18:40:00Z", "lang": "TypeScript"},
                    {"name": "Movies-Manager", "pushed": "2026-07-11T09:15:00Z", "lang": "C++"}],
+        "calendar": None,
     }
 
 
@@ -156,7 +193,7 @@ def render(data, t):
     a(f'<text x="40" y="176" font-size="10" letter-spacing="3.5" fill="{t["dim"]}">MOST RECENT PUSHES</text>')
     for i, r in enumerate(data["recent"]):
         y = 202 + i * 24
-        name = escape(r["name"])[:30]
+        name = escape(shorten(r["name"], 30))
         a(f'<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" '
           f'begin="{0.5 + 0.12 * i:.2f}s" fill="freeze"/>')
         a(f'<rect x="40" y="{y - 9}" width="3" height="12" fill="{t["accent"]}" opacity="0.8"/>')
@@ -175,7 +212,7 @@ def render(data, t):
         pct = byts / total
         w = max(3.0, pct * (bx1 - bx0))
         col = LANG_COLOR.get(lang, FALLBACK[i % len(FALLBACK)])
-        a(f'<text x="504" y="{y + 4}" font-size="11" fill="{t["muted"]}">{escape(lang)[:14]}</text>')
+        a(f'<text x="504" y="{y + 4}" font-size="11" fill="{t["muted"]}">{escape(shorten(lang, 16))}</text>')
         a(f'<rect x="{bx0}" y="{y - 5}" width="{bx1 - bx0}" height="9" rx="4.5" fill="{t["track"]}"/>')
         a(f'<rect x="{bx0}" y="{y - 5}" width="0" height="9" rx="4.5" fill="{col}">'
           f'<animate attributeName="width" from="0" to="{w:.1f}" dur="1.1s" '
@@ -191,6 +228,114 @@ def render(data, t):
     return "\n".join(p)
 
 
+
+def render_contributions(cal, t):
+    """Custom contribution grid - our palette, our layout, animated column by column."""
+    CELL, GAP = 12.0, 3.0
+    PITCH = CELL + GAP
+    LEFT, TOP = 78.0, 74.0
+
+    weeks = (cal or {}).get("weeks") or []
+    weeks = weeks[-53:]
+    total = (cal or {}).get("totalContributions", 0)
+
+    counts = [d["contributionCount"] for w in weeks for d in w["contributionDays"]]
+    peak = max(counts) if counts else 0
+    # 4 intensity buckets above zero, scaled to this person's own peak
+    steps = [max(1, round(peak * f)) for f in (0.12, 0.30, 0.55, 0.80)]
+    ramp = ["#0E2F3A", "#0E7490", "#0891B2", "#22D3EE", "#A5F3FC"] if t["bg"] == "#0D1117" \
+        else ["#EAEEF2", "#A5E4F0", "#38BDF8", "#0891B2", "#075985"]
+
+    def level(n):
+        if n <= 0:
+            return 0
+        for i, s_ in enumerate(steps):
+            if n <= s_:
+                return i + 1
+        return 4
+
+    W = int(LEFT + 53 * PITCH + 40)
+    H = int(TOP + 7 * PITCH + 52)
+    p_ = []
+    a = p_.append
+    a(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
+      f'role="img" aria-label="Contribution activity, {total} contributions in the last year">')
+    a(f'<defs><pattern id="cdots" width="14" height="14" patternUnits="userSpaceOnUse">'
+      f'<circle cx="1" cy="1" r="1" fill="{t["dim"]}" opacity="0.22"/></pattern></defs>')
+    a(f'<rect width="{W}" height="{H}" rx="10" fill="{t["bg"]}"/>')
+    a(f'<rect width="{W}" height="{H}" rx="10" fill="url(#cdots)"/>')
+    a(f'<g font-family="{MONO}">')
+
+    a(f'<circle cx="40" cy="40" r="3.5" fill="{t["accent"]}">'
+      f'<animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>')
+    a(f'<text x="54" y="44" font-size="11" letter-spacing="4.5" fill="{t["accent"]}">SIGNAL LOG</text>')
+    a(f'<text x="{W - 40}" y="44" font-size="11" letter-spacing="1.6" fill="{t["muted"]}" '
+      f'text-anchor="end">{total} CONTRIBUTIONS &#183; LAST 12 MONTHS</text>')
+    a(f'<line x1="40" y1="58" x2="{W - 40}" y2="58" stroke="{t["border"]}" stroke-width="1"/>')
+
+    # month ruler
+    seen = set()
+    for wi, w in enumerate(weeks):
+        d0 = w["contributionDays"][0]["date"]
+        mon = d0[:7]
+        if mon in seen:
+            continue
+        seen.add(mon)
+        if int(d0[8:10]) > 7:
+            continue
+        label = dt.datetime.strptime(d0, "%Y-%m-%d").strftime("%b").upper()
+        a(f'<text x="{LEFT + wi * PITCH:.1f}" y="{TOP - 8:.1f}" font-size="8.5" '
+          f'letter-spacing="1.2" fill="{t["dim"]}">{label}</text>')
+
+    for di, label in ((1, "MON"), (3, "WED"), (5, "FRI")):
+        a(f'<text x="{LEFT - 12:.1f}" y="{TOP + di * PITCH + CELL - 2.5:.1f}" font-size="8.5" '
+          f'letter-spacing="1.2" fill="{t["dim"]}" text-anchor="end">{label}</text>')
+
+    for wi, w in enumerate(weeks):
+        x = LEFT + wi * PITCH
+        delay = 0.25 + wi * 0.014
+        a(f'<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.32s" '
+          f'begin="{delay:.3f}s" fill="freeze"/>')
+        for d in w["contributionDays"]:
+            y = TOP + d["weekday"] * PITCH
+            n = d["contributionCount"]
+            a(f'<rect x="{x:.1f}" y="{y:.1f}" width="{CELL}" height="{CELL}" rx="2.5" '
+              f'fill="{ramp[level(n)]}"><title>{d["date"]}: {n}</title></rect>')
+        a('</g>')
+
+    # legend
+    ly = TOP + 7 * PITCH + 22
+    a(f'<text x="{LEFT}" y="{ly + 9:.1f}" font-size="8.5" letter-spacing="1.4" fill="{t["dim"]}">LESS</text>')
+    for i, c in enumerate(ramp):
+        a(f'<rect x="{LEFT + 40 + i * 16:.1f}" y="{ly:.1f}" width="12" height="12" rx="2.5" fill="{c}"/>')
+    a(f'<text x="{LEFT + 128:.1f}" y="{ly + 9:.1f}" font-size="8.5" letter-spacing="1.4" fill="{t["dim"]}">MORE</text>')
+    a(f'<text x="{W - 40}" y="{ly + 9:.1f}" font-size="8.5" letter-spacing="1.4" fill="{t["dim"]}" '
+      f'text-anchor="end">PEAK {peak}/DAY</text>')
+
+    a('</g>')
+    a(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" '
+      f'stroke="{t["border"]}" stroke-width="1"/>')
+    a('</svg>')
+    return "\n".join(p_)
+
+
+def mock_calendar():
+    import random
+    random.seed(7)
+    start = dt.date.today() - dt.timedelta(days=371)
+    start -= dt.timedelta(days=(start.weekday() + 1) % 7)
+    weeks, total = [], 0
+    for w in range(53):
+        days = []
+        for d in range(7):
+            date = start + dt.timedelta(days=w * 7 + d)
+            n = 0 if random.random() < 0.42 else random.randint(1, 14)
+            total += n
+            days.append({"date": date.isoformat(), "contributionCount": n, "weekday": d})
+        weeks.append({"contributionDays": days})
+    return {"totalContributions": total, "weeks": weeks}
+
+
 def main():
     use_mock = "--mock" in sys.argv
     try:
@@ -199,11 +344,16 @@ def main():
         print(f"::warning::telemetry fetch failed ({exc}); falling back to sample data")
         data = mock()
 
+    cal = data.get("calendar")
+    if not cal:
+        print("::warning::no contribution calendar; rendering sample grid")
+        cal = mock_calendar()
+
     OUT.mkdir(parents=True, exist_ok=True)
     for name, t in THEMES.items():
-        path = OUT / f"telemetry-{name}.svg"
-        path.write_text(render(data, t), encoding="utf-8")
-        print(f"wrote {path}")
+        (OUT / f"telemetry-{name}.svg").write_text(render(data, t), encoding="utf-8")
+        (OUT / f"contributions-{name}.svg").write_text(render_contributions(cal, t), encoding="utf-8")
+        print(f"wrote telemetry-{name}.svg  contributions-{name}.svg")
 
 
 if __name__ == "__main__":

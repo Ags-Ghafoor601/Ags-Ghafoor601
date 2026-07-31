@@ -6,7 +6,10 @@
   Every visual on this page is generated from files in this repository.
   assets/header-*.svg     hand-written animated SVG · radar sweep
   assets/divider-*.svg    hand-written animated SVG · oscilloscope trace
-  assets/telemetry-*.svg  rendered daily by tools/telemetry.py from the GitHub API
+  assets/timeline-*.svg   hand-written animated SVG · career rail
+  assets/radar-*.svg      hand-written animated SVG · skill radar
+  assets/telemetry-*.svg      rendered daily by tools/telemetry.py from the GitHub API
+  assets/contributions-*.svg  rendered daily from the contributions GraphQL API
 ═══════════════════════════════════════════════════════════════════════════════
 -->
 
@@ -235,7 +238,7 @@ concurrent code is humbling.
 > The gate is the point: it would rather say nothing than say something ungrounded.
 
 ```mermaid
-flowchart LR
+flowchart TD
     Q(["User query"]) --> SP["Sparse retrieval<br/><i>keyword · BM25</i>"]
     Q --> DN["Dense retrieval<br/><i>vector embeddings</i>"]
 
@@ -305,6 +308,16 @@ flowchart LR
 </td></tr>
 </table>
 
+## `>_ ./signal-strength`
+
+> Not a self-assessment. Each axis names the projects that back it — hover a vertex to see the score.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/radar-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/radar-light.svg">
+  <img alt="Skill radar with each axis backed by shipped projects" src="./assets/radar-dark.svg" width="100%">
+</picture>
+
 ## `>_ ./principles --show`
 
 <details>
@@ -358,7 +371,15 @@ Kiran never improvises a medical fact — every claim is limited to a **closed, 
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake.svg" alt="Contribution activity" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/contributions-light.svg">
+  <img alt="Contribution activity for the last 12 months" src="./assets/contributions-dark.svg" width="100%">
+</picture>
+
+<br>
+
+<img src="https://raw.githubusercontent.com/Ags-Ghafoor601/Ags-Ghafoor601/output/snake.svg" alt="Contribution snake" width="100%">
 
 </div>
 
@@ -372,19 +393,11 @@ Kiran never improvises a medical fact — every claim is limited to a **closed, 
 
 ## `>_ ./trajectory`
 
-```mermaid
-flowchart LR
-    A["2022–24<br/><b>KIPS College</b><br/>Intermediate CS · Grade A"] --> B["2024–28<br/><b>FAST NUCES</b><br/>BS Artificial Intelligence"]
-    B --> C["May 2025<br/><b>NASCON</b><br/>Officer"]
-    C --> D["Jun–Aug 2025<br/><b>AI GenMat</b><br/>AI Intern"]
-    D --> E["2025 – now<br/><b>Softora</b><br/>Lead Data Engineer"]
-    E --> F["Jun 2026 – now<br/><b>CalderR · Skill SYNC</b><br/>Agentic AI · ML Intern"]
-
-    classDef past fill:#0D1117,stroke:#8B949E,stroke-width:1.5px,color:#8B949E
-    classDef now  fill:#0D1117,stroke:#22D3EE,stroke-width:2.5px,color:#22D3EE
-    class A,B,C,D past
-    class E,F now
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/timeline-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/timeline-light.svg">
+  <img alt="Education and career trajectory, 2022 to present" src="./assets/timeline-dark.svg" width="100%">
+</picture>
 
 ## `>_ ./now --tuning-into`
 
