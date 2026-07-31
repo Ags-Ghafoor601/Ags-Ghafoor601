@@ -349,7 +349,7 @@ Kiran never improvises a medical fact — every claim is limited to a **closed, 
 
 <sub>Not a stats widget — rendered from the GitHub API by <a href="./tools/telemetry.py"><code>tools/telemetry.py</code></a>, committed to this repo daily.</sub>
 
-<br><br>
+<br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-dark.svg">
