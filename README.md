@@ -22,7 +22,7 @@
 </picture>
 
 <a href="https://abdul-portfolio-swart.vercel.app"><img src="https://img.shields.io/badge/PORTFOLIO-0D1117?style=for-the-badge&logo=vercel&logoColor=22D3EE&labelColor=0D1117" alt="Portfolio"></a>
-<a href="https://www.linkedin.com/in/abdul-ghafoor-ags"><img src="https://img.shields.io/badge/LINKEDIN-0D1117?style=for-the-badge&logo=linkedin&logoColor=22D3EE&labelColor=0D1117" alt="LinkedIn"></a>
+<a href="https://www.linkedin.com/in/abdul-ghafoor-ags"><img src="https://img.shields.io/badge/LINKEDIN-0D1117?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzIyRDNFRSI+PGNpcmNsZSBjeD0iNSIgY3k9IjYiIHI9IjIuNiIvPjxjaXJjbGUgY3g9IjUiIGN5PSIxOCIgcj0iMi42Ii8+PGNpcmNsZSBjeD0iMTguNSIgY3k9IjEyIiByPSIzLjIiLz48cGF0aCBkPSJNNy4yIDcuMSAxNS43IDExIDE1IDEyLjcgNi41IDguOHpNNi41IDE1LjIgMTUgMTEuM2wuNyAxLjctOC41IDMuOXoiLz48L3N2Zz4=&labelColor=0D1117" alt="LinkedIn"></a>
 <a href="mailto:agsghafoor601@gmail.com"><img src="https://img.shields.io/badge/EMAIL-0D1117?style=for-the-badge&logo=gmail&logoColor=22D3EE&labelColor=0D1117" alt="Email"></a>
 <a href="https://abdul-portfolio-swart.vercel.app/Abdul_Ghafoor_Resume.pdf"><img src="https://img.shields.io/badge/RESUME-0D1117?style=for-the-badge&logo=readdotcv&logoColor=22D3EE&labelColor=0D1117" alt="Resume"></a>
 
@@ -278,10 +278,10 @@ flowchart TD
 <tr><td><b>AI &amp; ML</b></td><td>
 <img src="https://img.shields.io/badge/RAG-0D1117?style=flat-square&logo=databricks&logoColor=22D3EE&labelColor=0D1117">
 <img src="https://img.shields.io/badge/LlamaIndex-0D1117?style=flat-square&logo=meta&logoColor=22D3EE&labelColor=0D1117">
-<img src="https://img.shields.io/badge/OpenAI-0D1117?style=flat-square&logo=openai&logoColor=22D3EE&labelColor=0D1117">
+<img src="https://img.shields.io/badge/OpenAI-0D1117?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzIyRDNFRSI+PHBhdGggZD0iTTEyIDEuNWMuNiA0LjQgMi40IDYuOSA2LjYgOC4xdi4zYy00LjIgMS4yLTYgMy43LTYuNiA4LjFoLS4zYy0uNi00LjQtMi40LTYuOS02LjYtOC4xdi0uM2M0LjItMS4yIDYtMy43IDYuNi04LjF6Ii8+PHBhdGggZD0iTTE5LjQgMTUuNmMuMyAyIDEuMSAzLjEgMyAzLjd2LjFjLTEuOS42LTIuNyAxLjctMyAzLjdoLS4yYy0uMy0yLTEuMS0zLjEtMy0zLjd2LS4xYzEuOS0uNiAyLjctMS43IDMtMy43eiIvPjwvc3ZnPg==&labelColor=0D1117">
 <img src="https://img.shields.io/badge/Claude-0D1117?style=flat-square&logo=anthropic&logoColor=22D3EE&labelColor=0D1117">
 <img src="https://img.shields.io/badge/Groq-0D1117?style=flat-square&logo=lightning&logoColor=22D3EE&labelColor=0D1117">
-<img src="https://img.shields.io/badge/ChromaDB-0D1117?style=flat-square&logo=chroma&logoColor=22D3EE&labelColor=0D1117">
+<img src="https://img.shields.io/badge/ChromaDB-0D1117?style=flat-square&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzIyRDNFRSI+PGVsbGlwc2UgY3g9IjEyIiBjeT0iNSIgcng9IjcuNSIgcnk9IjMiLz48cGF0aCBkPSJNNC41IDguMnYzLjZjMCAxLjcgMy40IDMgNy41IDNzNy41LTEuMyA3LjUtM1Y4LjJjLTEuNyAxLjQtNC42IDItNy41IDJzLTUuOC0uNi03LjUtMnoiLz48cGF0aCBkPSJNNC41IDE0LjZ2My42YzAgMS43IDMuNCAzIDcuNSAzczcuNS0xLjMgNy41LTN2LTMuNmMtMS43IDEuNC00LjYgMi03LjUgMnMtNS44LS42LTcuNS0yeiIvPjwvc3ZnPg==&labelColor=0D1117">
 <img src="https://img.shields.io/badge/Hugging%20Face-0D1117?style=flat-square&logo=huggingface&logoColor=22D3EE&labelColor=0D1117">
 <img src="https://img.shields.io/badge/YOLOv8-0D1117?style=flat-square&logo=yolo&logoColor=22D3EE&labelColor=0D1117">
 <img src="https://img.shields.io/badge/scikit--learn-0D1117?style=flat-square&logo=scikitlearn&logoColor=22D3EE&labelColor=0D1117">
@@ -429,7 +429,7 @@ Open to internships, collaborations, and interesting problems. I read every tran
 <br>
 
 <a href="mailto:agsghafoor601@gmail.com"><img src="https://img.shields.io/badge/agsghafoor601@gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=22D3EE&labelColor=0D1117"></a>
-<a href="https://www.linkedin.com/in/abdul-ghafoor-ags"><img src="https://img.shields.io/badge/abdul--ghafoor--ags-0D1117?style=for-the-badge&logo=linkedin&logoColor=22D3EE&labelColor=0D1117"></a>
+<a href="https://www.linkedin.com/in/abdul-ghafoor-ags"><img src="https://img.shields.io/badge/abdul--ghafoor--ags-0D1117?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzIyRDNFRSI+PGNpcmNsZSBjeD0iNSIgY3k9IjYiIHI9IjIuNiIvPjxjaXJjbGUgY3g9IjUiIGN5PSIxOCIgcj0iMi42Ii8+PGNpcmNsZSBjeD0iMTguNSIgY3k9IjEyIiByPSIzLjIiLz48cGF0aCBkPSJNNy4yIDcuMSAxNS43IDExIDE1IDEyLjcgNi41IDguOHpNNi41IDE1LjIgMTUgMTEuM2wuNyAxLjctOC41IDMuOXoiLz48L3N2Zz4=&labelColor=0D1117"></a>
 <a href="https://abdul-portfolio-swart.vercel.app"><img src="https://img.shields.io/badge/abdul--portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=22D3EE&labelColor=0D1117"></a>
 
 <br><br>
