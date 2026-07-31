@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="Abdul Ghafoor — AI Engineer and Full-Stack Developer">
+<defs>
+<radialGradient id="sweep" cx="0" cy="0.5" r="1"><stop offset="0%" stop-color="#0891B2" stop-opacity="0.55"/><stop offset="55%" stop-color="#0891B2" stop-opacity="0.18"/><stop offset="100%" stop-color="#0891B2" stop-opacity="0"/></radialGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0891B2" stop-opacity="0.9"/><stop offset="100%" stop-color="#0891B2" stop-opacity="0"/></linearGradient>
+<linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0891B2" stop-opacity="0"/><stop offset="50%" stop-color="#0891B2" stop-opacity="0.5"/><stop offset="100%" stop-color="#0891B2" stop-opacity="0"/></linearGradient>
+<pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#8C959F" opacity="0.28"/></pattern>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="scope"><circle cx="175.0" cy="145.0" r="118.0"/></clipPath>
+<clipPath id="nameReveal"><rect x="330" y="100" width="0" height="66"><animate attributeName="width" from="0" to="560" dur="1.5s" begin="0.35s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/></rect></clipPath>
+<clipPath id="frame"><rect x="0.5" y="0.5" width="999" height="299" rx="10"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1000" height="300" fill="#FFFFFF"/>
+<rect width="1000" height="300" fill="url(#dots)"/>
+<g>
+<circle cx="175.0" cy="145.0" r="30" fill="none" stroke="#A5E4F0" stroke-width="1" opacity="0.3"/>
+<circle cx="175.0" cy="145.0" r="59" fill="none" stroke="#A5E4F0" stroke-width="1" opacity="0.24"/>
+<circle cx="175.0" cy="145.0" r="88" fill="none" stroke="#A5E4F0" stroke-width="1" opacity="0.2"/>
+<circle cx="175.0" cy="145.0" r="118" fill="none" stroke="#A5E4F0" stroke-width="1" opacity="0.34"/>
+<line x1="57.0" y1="145.0" x2="293.0" y2="145.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="175.0" y1="27.0" x2="175.0" y2="263.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="284.0" y1="145.0" x2="293.0" y2="145.0" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="285.1" y1="174.5" x2="289.0" y2="175.5" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="273.7" y1="202.0" x2="277.2" y2="204.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="252.1" y1="222.1" x2="258.4" y2="228.4" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="232.0" y1="243.7" x2="234.0" y2="247.2" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="204.5" y1="255.1" x2="205.5" y2="259.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="175.0" y1="254.0" x2="175.0" y2="263.0" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="145.5" y1="255.1" x2="144.5" y2="259.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="118.0" y1="243.7" x2="116.0" y2="247.2" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="97.9" y1="222.1" x2="91.6" y2="228.4" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="76.3" y1="202.0" x2="72.8" y2="204.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="64.9" y1="174.5" x2="61.0" y2="175.5" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="66.0" y1="145.0" x2="57.0" y2="145.0" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="64.9" y1="115.5" x2="61.0" y2="114.5" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="76.3" y1="88.0" x2="72.8" y2="86.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="97.9" y1="67.9" x2="91.6" y2="61.6" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="118.0" y1="46.3" x2="116.0" y2="42.8" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="145.5" y1="34.9" x2="144.5" y2="31.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="175.0" y1="36.0" x2="175.0" y2="27.0" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="204.5" y1="34.9" x2="205.5" y2="31.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="232.0" y1="46.3" x2="234.0" y2="42.8" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="252.1" y1="67.9" x2="258.4" y2="61.6" stroke="#A5E4F0" stroke-width="1" opacity="0.45"/>
+<line x1="273.7" y1="88.0" x2="277.2" y2="86.0" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+<line x1="285.1" y1="115.5" x2="289.0" y2="114.5" stroke="#A5E4F0" stroke-width="1" opacity="0.22"/>
+</g>
+<g clip-path="url(#scope)">
+<g><animateTransform attributeName="transform" type="rotate" from="0 175.0 145.0" to="360 175.0 145.0" dur="6.0s" repeatCount="indefinite"/>
+<path d="M 175.0 145.0 L 230.4 40.8 A 118.0 118.0 0 0 1 293.0 145.0 Z" fill="url(#sweep)" transform="rotate(0 175.0 145.0)"/>
+<line x1="175.0" y1="145.0" x2="293.0" y2="145.0" stroke="url(#fade)" stroke-width="1.6" filter="url(#glow)"/>
+</g></g>
+<g><circle cx="265.6" cy="187.3" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>RideFlow</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="0.417s" repeatCount="indefinite"/></circle><circle cx="265.6" cy="187.3" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="0.417s;0.417s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="0.417s" repeatCount="indefinite"/></circle></g>
+<g><circle cx="191.6" cy="206.8" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>Kiran</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="1.250s" repeatCount="indefinite"/></circle><circle cx="191.6" cy="206.8" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="1.250s;1.250s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="1.250s" repeatCount="indefinite"/></circle></g>
+<g><circle cx="105.6" cy="227.7" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>Audit Agent</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="2.167s" repeatCount="indefinite"/></circle><circle cx="105.6" cy="227.7" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="2.167s;2.167s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="2.167s" repeatCount="indefinite"/></circle></g>
+<g><circle cx="125.8" cy="136.3" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>UniGateway</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="3.167s" repeatCount="indefinite"/></circle><circle cx="125.8" cy="136.3" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="3.167s;3.167s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="3.167s" repeatCount="indefinite"/></circle></g>
+<g><circle cx="132.0" cy="70.5" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>LearnPath</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="4.000s" repeatCount="indefinite"/></circle><circle cx="132.0" cy="70.5" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="4.000s;4.000s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="4.000s" repeatCount="indefinite"/></circle></g>
+<g><circle cx="231.0" cy="48.0" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>Cameraman Robot</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="5.000s" repeatCount="indefinite"/></circle><circle cx="231.0" cy="48.0" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="5.000s;5.000s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="5.000s" repeatCount="indefinite"/></circle></g>
+<g><circle cx="212.6" cy="131.3" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>ChromeForge</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="5.667s" repeatCount="indefinite"/></circle><circle cx="212.6" cy="131.3" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="5.667s;5.667s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="5.667s" repeatCount="indefinite"/></circle></g>
+<circle cx="175.0" cy="145.0" r="2.5" fill="#0891B2" opacity="0.85"/>
+<text x="175.0" y="289.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="3" fill="#8C959F" text-anchor="middle">15 SYSTEMS TRACKED</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+<text x="336" y="86" font-size="11" letter-spacing="5" fill="#0891B2">SIGNAL ACQUIRED<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/></text>
+<circle cx="322" cy="82" r="3" fill="#0891B2"><animate attributeName="opacity" values="1;0.15;1" dur="1.4s" repeatCount="indefinite"/></circle>
+<g clip-path="url(#nameReveal)"><text x="336" y="146" font-size="44" font-weight="700" letter-spacing="1.5" fill="#0D1117">ABDUL GHAFOOR<tspan fill="#0891B2" dx="6">_<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.48;0.52;1" dur="1.15s" begin="1.7s" repeatCount="indefinite"/></tspan></text></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.5s" fill="freeze"/><text x="336" y="180" font-size="13.5" letter-spacing="2.6" fill="#57606A">AI ENGINEER &#183; FULL-STACK DEVELOPER &#183; SYSTEMS BUILDER</text></g>
+<line x1="336" y1="203" x2="336" y2="203" stroke="#D0D7DE" stroke-width="1"><animate attributeName="x2" from="336" to="930" dur="1.1s" begin="1.7s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/></line>
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.8s" begin="2.1s" fill="freeze"/>
+<circle cx="340" cy="230" r="3.5" fill="#059669"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
+<text x="354" y="234" font-size="11" letter-spacing="1.8" fill="#57606A">STATUS: ONLINE</text>
+<text x="354" y="234" font-size="11" letter-spacing="1.8" fill="#8C959F"><tspan dx="140">&#183;</tspan><tspan dx="18">TAXILA, PK</tspan><tspan dx="18">&#183;</tspan><tspan dx="18">BS AI &#8212; FAST NUCES &#8217;28</tspan></text>
+<text x="336" y="262" font-size="10.5" letter-spacing="1.4" fill="#8C959F">&gt;_ agentic systems &#183; retrieval pipelines &#183; full-stack platforms</text>
+</g>
+</g>
+<rect x="0" y="0" width="1000" height="2" fill="url(#scan)" opacity="0.35"><animate attributeName="y" values="-4;304" dur="7s" repeatCount="indefinite"/></rect>
+</g>
+<rect x="0.5" y="0.5" width="999" height="299" rx="10" fill="none" stroke="#D0D7DE" stroke-width="1"/>
+</svg>
