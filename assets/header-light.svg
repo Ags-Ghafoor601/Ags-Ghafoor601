@@ -3,7 +3,7 @@
 <radialGradient id="sweep" cx="0" cy="0.5" r="1"><stop offset="0%" stop-color="#0891B2" stop-opacity="0.55"/><stop offset="55%" stop-color="#0891B2" stop-opacity="0.18"/><stop offset="100%" stop-color="#0891B2" stop-opacity="0"/></radialGradient>
 <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0891B2" stop-opacity="0.9"/><stop offset="100%" stop-color="#0891B2" stop-opacity="0"/></linearGradient>
 <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0891B2" stop-opacity="0"/><stop offset="50%" stop-color="#0891B2" stop-opacity="0.5"/><stop offset="100%" stop-color="#0891B2" stop-opacity="0"/></linearGradient>
-<pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#8C959F" opacity="0.28"/></pattern>
+<pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#656D76" opacity="0.28"/></pattern>
 <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <clipPath id="scope"><circle cx="175.0" cy="145.0" r="118.0"/></clipPath>
 <clipPath id="nameReveal"><rect x="330" y="100" width="0" height="66"><animate attributeName="width" from="0" to="560" dur="1.5s" begin="0.35s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/></rect></clipPath>
@@ -57,7 +57,7 @@
 <g><circle cx="231.0" cy="48.0" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>Cameraman Robot</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="5.000s" repeatCount="indefinite"/></circle><circle cx="231.0" cy="48.0" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="5.000s;5.000s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="5.000s" repeatCount="indefinite"/></circle></g>
 <g><circle cx="212.6" cy="131.3" r="3" fill="#0891B2" opacity="0" filter="url(#glow)"><title>ChromeForge</title><animate attributeName="opacity" values="0;1;0.85;0;0" keyTimes="0;0.012;0.09;0.42;1" dur="6.0s" begin="5.667s" repeatCount="indefinite"/></circle><circle cx="212.6" cy="131.3" r="3" fill="none" stroke="#0891B2" stroke-width="1.2" opacity="0"><animate attributeName="r" values="3;16" keyTimes="0;1" dur="1.6s" begin="5.667s;5.667s+6.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="5.667s" repeatCount="indefinite"/></circle></g>
 <circle cx="175.0" cy="145.0" r="2.5" fill="#0891B2" opacity="0.85"/>
-<text x="175.0" y="289.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="3" fill="#8C959F" text-anchor="middle">15 SYSTEMS TRACKED</text>
+<text x="175.0" y="289.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="9" letter-spacing="3" fill="#656D76" text-anchor="middle">15 SYSTEMS TRACKED</text>
 <g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
 <text x="336" y="86" font-size="11" letter-spacing="5" fill="#0891B2">SIGNAL ACQUIRED<animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/></text>
 <circle cx="322" cy="82" r="3" fill="#0891B2"><animate attributeName="opacity" values="1;0.15;1" dur="1.4s" repeatCount="indefinite"/></circle>
@@ -67,8 +67,8 @@
 <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.8s" begin="2.1s" fill="freeze"/>
 <circle cx="340" cy="230" r="3.5" fill="#059669"><animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/></circle>
 <text x="354" y="234" font-size="11" letter-spacing="1.8" fill="#57606A">STATUS: ONLINE</text>
-<text x="354" y="234" font-size="11" letter-spacing="1.8" fill="#8C959F"><tspan dx="140">&#183;</tspan><tspan dx="18">TAXILA, PK</tspan><tspan dx="18">&#183;</tspan><tspan dx="18">BS AI &#8212; FAST NUCES &#8217;28</tspan></text>
-<text x="336" y="262" font-size="10.5" letter-spacing="1.4" fill="#8C959F">&gt;_ agentic systems &#183; retrieval pipelines &#183; full-stack platforms</text>
+<text x="354" y="234" font-size="11" letter-spacing="1.8" fill="#656D76"><tspan dx="140">&#183;</tspan><tspan dx="18">TAXILA, PK</tspan><tspan dx="18">&#183;</tspan><tspan dx="18">BS AI &#8212; FAST NUCES &#8217;28</tspan></text>
+<text x="336" y="262" font-size="10.5" letter-spacing="1.4" fill="#656D76">&gt;_ agentic systems &#183; retrieval pipelines &#183; full-stack platforms</text>
 </g>
 </g>
 <rect x="0" y="0" width="1000" height="2" fill="url(#scan)" opacity="0.35"><animate attributeName="y" values="-4;304" dur="7s" repeatCount="indefinite"/></rect>

@@ -26,7 +26,7 @@ THEMES = {
     "dark": dict(bg="#0D1117", border="#1F2937", accent="#22D3EE", accent2="#A78BFA",
                  text="#E6EDF3", muted="#8B949E", dim="#4B5563", track="#161B22"),
     "light": dict(bg="#FFFFFF", border="#D0D7DE", accent="#0891B2", accent2="#7C3AED",
-                  text="#0D1117", muted="#57606A", dim="#8C959F", track="#EAEEF2"),
+                  text="#0D1117", muted="#57606A", dim="#656D76", track="#EAEEF2"),
 }
 
 # Languages get a stable colour so the chart reads the same every day.
